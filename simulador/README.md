@@ -86,3 +86,28 @@ src/
 
 Material educativo de preparación. No reproduce contenido confidencial del examen ni
 constituye asesoría legal.
+
+## Formas de usarlo
+
+1. **Un solo archivo, sin instalar nada**
+
+   ```bash
+   npm run build:single
+   ```
+
+   Genera `dist-single/index.html`: la aplicación completa en un único archivo, que
+   funciona abriéndolo directamente en el navegador (doble clic) o subiéndolo a
+   cualquier alojamiento estático. El progreso se guarda en el navegador donde se abra.
+
+2. **GitHub Pages (automático)**
+
+   El flujo de trabajo `.github/workflows/deploy-simulador.yml` compila, valida y publica
+   el simulador en cada `push`. Para activarlo la primera vez: en GitHub, **Settings →
+   Pages → Source: GitHub Actions**. La dirección publicada será
+   `https://<usuario>.github.io/florida-healthandlifeinsurance/`.
+
+3. **En local**
+
+   ```bash
+   npm install && npm run dev
+   ```
