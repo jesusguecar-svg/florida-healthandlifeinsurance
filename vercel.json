@@ -1,0 +1,8 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "buildCommand": "cd simulador && npm ci && npm run build",
+  "outputDirectory": "simulador/dist",
+  "installCommand": "echo \"instalación gestionada por buildCommand\"",
+  "framework": null,
+  "cleanUrls": true
+}
