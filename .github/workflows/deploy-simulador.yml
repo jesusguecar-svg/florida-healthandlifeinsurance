@@ -4,7 +4,9 @@ on:
   push:
     branches:
       - main
-      - claude/spanish-florida-insurance-sim-sfnp79
+  # En los pull requests solo se valida y compila: el entorno github-pages
+  # únicamente admite despliegues desde la rama por defecto.
+  pull_request:
   workflow_dispatch:
 
 permissions:
@@ -43,6 +45,7 @@ jobs:
 
   deploy:
     needs: build
+    if: github.event_name != 'pull_request'
     runs-on: ubuntu-latest
     environment:
       name: github-pages
