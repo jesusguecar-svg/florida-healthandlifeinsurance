@@ -565,6 +565,20 @@ p {
   cursor: default;
 }
 
+/* En pantallas estrechas el botón de tachar pasa debajo, para que el texto de
+   la opción disponga del ancho completo. */
+@media (max-width: 640px) {
+  .opcion {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.45rem;
+  }
+
+  .opcion .boton-icono {
+    align-self: flex-end;
+  }
+}
+
 /* Explicaciones */
 .explicacion {
   border-radius: var(--radio);
